@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "1010c95e-3688-4df9-87fc-2fcb5c7093f2",
+		"name": "Create API for creating a form/transfer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create API for creating a form/transfer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{tokenlogin}}",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"transaction\": \n{\n \"receiver_id\":[1],\n \"amount\": 1, \n \"values\": [\"help\"],\n \"message\": \"Super ste!\" \n }\n }"
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/transactions",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
